@@ -25,20 +25,20 @@ static ChromeDriver driver;
 	}
 	
 	public void loginServiceNow() {
-		driver.get("https://dev83033.service-now.com/navpage.do");
+		driver.get("https://dev41128.service-now.com/navpage.do");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		WebElement loginFrame = driver.findElement(By.xpath("//iframe[@id='gsft_main']"));
 		driver.switchTo().frame(loginFrame);
 		driver.findElement(By.xpath("//input[@id='user_name']")).sendKeys("admin");
-		driver.findElement(By.xpath("//input[@id='user_password']")).sendKeys("Winlif@22");
+		driver.findElement(By.xpath("//input[@id='user_password']")).sendKeys("1wQsyajPQ0CQ");
 		driver.findElement(By.xpath("//button[@id='sysverb_login']")).click();
 	}
 	
 	public void newIncident() throws IOException, InterruptedException {
-		//Search ìincident ì Filter Navigator
+		//Search ‚Äúincident ‚Äú Filter Navigator
 		driver.findElement(By.xpath("//input[@id='filter']")).sendKeys("incident");
-		//Click ìAllî
+		//Click ‚ÄúAll‚Äù
 		driver.findElement(By.xpath("(//span[text()='Incident']/following::div[@class='sn-widget-list-title' and text()='All'])[1]")).click();
 		//Switch to frame
 		WebElement incidentFrame = driver.findElement(By.xpath("//iframe[@title='Incidents | ServiceNow']"));
